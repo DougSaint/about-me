@@ -36,7 +36,7 @@ export default class Home extends Component {
     const { stage } = this.state;
     return (
       <div
-        className="mt-10 flex flex-col h-screen justify-start"
+        className="mt-10 md:mt-0 flex flex-col h-screen justify-start"
         id="home-page"
       >
         <main>
@@ -58,7 +58,7 @@ export default class Home extends Component {
               )}
             </div>
           </section>
-          <div className="flex flex-col mt-10">
+          <div className="flex flex-col mt-10 md:mt-0">
             <div
               className={`${
                 stage >= 3 ? "opacity-100" : "opacity-0"
@@ -87,13 +87,13 @@ export default class Home extends Component {
         <button
           className={`${
             stage >= 3 ? "opacity-100 animate-pulse" : "opacity-0"
-          }  rounded-xl bg-purple-400 border text-xl mt-10 w-3/6 mx-auto p-3 transition delay-400 duration-200 ease-in-out`}
+          }  rounded-xl bg-purple-400  text-xl md:mt-5 mt-10 w-3/6 mx-auto p-3 transition delay-400 duration-200 ease-in-out`}
         >
           Fale Comigo
         </button>
-        <div className={`my-10 ${stage >= 3 ? "opacity-100" : "opacity-0"}`}>
+        <div className={`my-10 md:mt-3 ${stage >= 3 ? "opacity-100" : "opacity-0"}`}>
           <h3
-            className={`text-center text-xl text-purple-200 flex flex-col border-2 border-red-200`}
+            className={`text-center text-xl text-purple-200 flex flex-col`}
           >
             Você pode me encontrar Aqui
           </h3>
