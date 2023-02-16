@@ -61,6 +61,7 @@ export default function Skills() {
           <div className="grid grid-cols-2 w-4/6 mx-auto gap-x-6 gap-y-6 mt-5 md:grid-cols-3 place-items-center">
             {texts.HardSkills.map((skill, index) => (
               <CardSkill
+                key = {index}
                 img={skill.img}
                 skillName={skill.name}
                 textColor="text-white"

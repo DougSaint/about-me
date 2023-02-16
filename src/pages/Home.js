@@ -36,7 +36,7 @@ export default class Home extends Component {
     const { stage } = this.state;
     return (
       <div
-        className="mt-10 md:mt-0 flex flex-col h-screen justify-start"
+        className="flex flex-col h-screen justify-start"
         id="home-page"
       >
         <main>
@@ -72,12 +72,12 @@ export default class Home extends Component {
               >
                 <img src={pcImage} alt="an computer" className="md:w-6/12" />
               </div>
-              <div className="w-8/12 mt-auto h-full self-center md:ml-3 flex items-center">
+              <div className="w-8/12 mt-auto h-full self-center md:ml-3 flex items-center mb-auto">
                 {stage >= 3 && (
                   <WriteText
                     text={"Estou estudando <Desenvolvimento Web /> pela Trybe"}
                     nextStage={this.nextStage}
-                    styles="text-purple-200"
+                    styles="text-purple-200 self-center  mx-auto"
                   />
                 )}
               </div>
@@ -92,13 +92,13 @@ export default class Home extends Component {
         >
           Fale Comigo
         </button>
-        <div className={`my-10 md:mt-auto ${stage >= 3 ? "opacity-100" : "opacity-0"}`}>
+        <div className={`my-5 md:mt-auto ${stage >= 3 ? "opacity-100" : "opacity-0"}`}>
           <h3
             className={`text-center text-xl text-purple-200 flex flex-col`}
           >
             Você pode me encontrar Aqui
           </h3>
-          <div className="flex w-3/6 mx-auto justify-around mt-auto">
+          <div className="flex w-3/6 mx-auto justify-around mt-5 md:mt-auto">
             <a href="https://www.linkedin.com/in/doug-santos/" target="_blank">
               <div className="flex flex-col justify-center items-center">
                 <img src={linkedinLogo} alt="linkedin logo" />
@@ -113,11 +113,11 @@ export default class Home extends Component {
             </a>
           </div>
         </div>
-        <div className={`${styles.flexCenter} w-4/6 mx-auto`}>
+        <div className={`${styles.flexCenter} w-4/6 mx-auto  `}>
           <div
             className={`${
               stage >= 3 ? "opacity-100" : "opacity-0"
-            } flex flex-col justify-center items-center w-full animate-bounce cursor-pointer`}
+            }  flex flex-col justify-center items-center w-full animate-bounce cursor-pointer`}
             onClick={this.changeToSkills}
           >
             <button
@@ -126,21 +126,21 @@ export default class Home extends Component {
               {" "}
               Minhas Habilidades
             </button>
-            <img src={arrowDown} className={"w-1/6"} />
+            <img src={arrowDown} className={"w-2/6 md:w-1/6"} />
           </div>
 
           <div
             onClick={this.crollToContact}
             className={`${
               stage >= 3 ? "opacity-100" : "opacity-0"
-            } flex flex-col justify-center items-center w-full animate-bounce cursor-pointer`}
+            } flex flex-col justify-center items-center h-full w-full animate-bounce cursor-pointer`}
           >
             <button
               className={`mt-auto rounded-xl text-white w-6/6 mx-auto flex text-center`}
             >
               Contato{" "}
             </button>
-            <img src={arrowDown} className={"w-1/6"} />
+            <img src={arrowDown} className={"w-2/6 md:w-1/6"} />
           </div>
         </div>
       </div>
