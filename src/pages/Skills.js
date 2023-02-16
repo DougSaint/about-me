@@ -32,20 +32,19 @@ export default function Skills() {
   }, [renderCard, startRender]);
 
   const scrollToHome = () => {
-    scroller.scrollTo('home-page', {
+    scroller.scrollTo("home-page", {
       duration: 800,
       delay: 0,
-      smooth: 'easeInOutQuart'
+      smooth: "easeInOutQuart",
     });
   };
   const scrollToContact = () => {
-    scroller.scrollTo('contact-page', {
+    scroller.scrollTo("contact-page", {
       duration: 800,
       delay: 0,
-      smooth: 'easeInOutQuart'
+      smooth: "easeInOutQuart",
     });
   };
-
 
   return (
     <div ref={ref} className="h-screen" id="skills-section">
@@ -61,52 +60,48 @@ export default function Skills() {
           <div className="grid grid-cols-2 w-4/6 mx-auto gap-x-6 gap-y-6 mt-5 md:grid-cols-3 place-items-center">
             {texts.HardSkills.map((skill, index) => (
               <CardSkill
-                key = {index}
+                key={index}
                 img={skill.img}
                 skillName={skill.name}
                 textColor="text-white"
                 imgStyle={skill.styles}
-                divStyle = { renderCard >= index + 3 ? 'flex' : 'hidden'}
+                divStyle={renderCard >= index + 3 ? "flex" : "hidden"}
               />
             ))}
           </div>
 
-         <div className ="flex center w-4/6 justify-around mx-auto" >
-         <div
-            onClick={scrollToHome}
-            className={`${
-              renderCard >= 11 ? "opacity-100" : "opacity-0"
-            } flex flex-col justify-center items-center w-full mt-5 animate-bounce cursor-pointer`}
-          >
-            <button
-              className={`mt-5 rounded-xl text-white w-6/6 mx-auto flex text-center`}
+          <div className="flex center w-4/6 justify-around mx-auto">
+            <div
+              onClick={scrollToHome}
+              className={`${
+                renderCard >= 11 ? "opacity-100" : "opacity-0"
+              } flex flex-col justify-center items-center w-full mt-5 animate-bounce cursor-pointer`}
             >
-              HomePage{" "}
-            </button>
-            <img src={arrowDown} className={"w-2/6 rotate-180 md:w-1/6"} />
-          </div>
+              <button
+                className={`mt-5 rounded-xl text-white w-6/6 mx-auto flex text-center`}
+              >
+                HomePage{" "}
+              </button>
+              <img src={arrowDown} className={"w-2/6 rotate-180 md:w-1/6"} />
+            </div>
 
-          <div
-            onClick={scrollToContact}
-            className={`${
-              renderCard >= 11 ? "opacity-100" : "opacity-0"
-            } flex flex-col justify-center items-center w-full mt-5 animate-bounce cursor-pointer`}
-          >
-            <button
-              className={`mt-5 rounded-xl text-white w-6/6 mx-auto flex text-center`}
+            <div
+              onClick={scrollToContact}
+              className={`${
+                renderCard >= 11 ? "opacity-100" : "opacity-0"
+              } flex flex-col justify-center items-center w-full mt-5 animate-bounce cursor-pointer`}
             >
-              Contato{" "}
-            </button>
-            <img src={arrowDown} className={"w-2/6 md:w-1/6"} />
+              <button
+                className={`mt-5 rounded-xl text-white w-6/6 mx-auto flex text-center`}
+              >
+                Contato{" "}
+              </button>
+              <img src={arrowDown} className={"w-2/6 md:w-1/6"} />
+            </div>
           </div>
-
-         </div>
-         
-          
         </section>
       )}
 
-      
       {handleVisibilityChange(inView)}
     </div>
   );

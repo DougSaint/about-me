@@ -72,7 +72,7 @@ const ContactPage = () => {
           startRender ? "opacity-1" : "opacity-0"
         } transition-opacity duration-[2000ms] easy-in-out`}
       >
-        <h1 className="text-white text-2xl">Estou ancioso pelo seu contato</h1>
+        <h1 className="text-white text-2xl">Estou ansioso pelo seu contato</h1>
       </div>
       {handleVisibilityChange(inView)}
       <form

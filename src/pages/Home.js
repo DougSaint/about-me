@@ -10,7 +10,7 @@ import githubLogo from "../icons/github.svg";
 
 export default class Home extends Component {
   state = {
-    stage: 0,
+    stage: 5,
   };
 
   nextStage = () => {
@@ -92,13 +92,13 @@ export default class Home extends Component {
         >
           Fale Comigo
         </button>
-        <div className={`my-5 md:mt-auto ${stage >= 3 ? "opacity-100" : "opacity-0"}`}>
+        <div className={`my-6 md:my-auto ${stage >= 3 ? "opacity-100" : "opacity-0"}`}>
           <h3
             className={`text-center text-xl text-purple-200 flex flex-col`}
           >
             Você pode me encontrar Aqui
           </h3>
-          <div className="flex w-3/6 mx-auto justify-around mt-5 md:mt-auto">
+          <div className="flex w-3/6 mx-auto justify-around md:mt-auto">
             <a href="https://www.linkedin.com/in/doug-santos/" target="_blank">
               <div className="flex flex-col justify-center items-center">
                 <img src={linkedinLogo} alt="linkedin logo" />
@@ -113,7 +113,7 @@ export default class Home extends Component {
             </a>
           </div>
         </div>
-        <div className={`${styles.flexCenter} w-4/6 mx-auto  `}>
+        <div className={`${styles.flexCenter} w-6/6 mx-auto`}>
           <div
             className={`${
               stage >= 3 ? "opacity-100" : "opacity-0"
@@ -121,10 +121,10 @@ export default class Home extends Component {
             onClick={this.changeToSkills}
           >
             <button
-              className={`mt-5 rounded-xl text-white w-6/6 mx-auto flex text-center`}
+              className={`rounded-xl text-white w-6/6 mx-auto flex text-center`}
             >
               {" "}
-              Minhas Habilidades
+              Hard Skills
             </button>
             <img src={arrowDown} className={"w-2/6 md:w-1/6"} />
           </div>
@@ -136,7 +136,7 @@ export default class Home extends Component {
             } flex flex-col justify-center items-center h-full w-full animate-bounce cursor-pointer`}
           >
             <button
-              className={`mt-auto rounded-xl text-white w-6/6 mx-auto flex text-center`}
+              className={`rounded-xl text-white w-6/6 mx-auto flex text-center`}
             >
               Contato{" "}
             </button>
