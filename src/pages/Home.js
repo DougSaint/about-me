@@ -10,7 +10,7 @@ import githubLogo from "../icons/github.svg";
 
 export default class Home extends Component {
   state = {
-    stage: 5,
+    stage: 0,
   };
 
   nextStage = () => {
@@ -87,12 +87,12 @@ export default class Home extends Component {
         <button
           onClick={this.crollToContact}
           className={`${
-            stage >= 3 ? "opacity-100 animate-pulse" : "opacity-0"
+            stage >= 4 ? "opacity-100 animate-pulse" : "opacity-0"
           }  rounded-xl bg-purple-400  text-xl md:mt-auto mt-10 w-3/6 mx-auto p-3 transition delay-400 duration-200 ease-in-out`}
         >
           Fale Comigo
         </button>
-        <div className={`my-6 md:my-auto ${stage >= 3 ? "opacity-100" : "opacity-0"}`}>
+        <div className={`my-6 md:my-auto ${stage >= 4 ? "opacity-100" : "opacity-0"}`}>
           <h3
             className={`text-center text-xl text-purple-200 flex flex-col`}
           >
@@ -107,7 +107,7 @@ export default class Home extends Component {
             </a>
             <a href="https://github.com/DougSaint" target="_blank">
               <div className="flex flex-col justify-center items-center">
-                <img src={linkedinLogo} alt="linkedin logo" />
+                <img src={githubLogo} className="w-[48px]" alt="linkedin logo" />
                 <p className="text-white text-lg">GitHub</p>
               </div>
             </a>
@@ -116,7 +116,7 @@ export default class Home extends Component {
         <div className={`${styles.flexCenter} w-6/6 mx-auto`}>
           <div
             className={`${
-              stage >= 3 ? "opacity-100" : "opacity-0"
+              stage >= 4 ? "opacity-100" : "opacity-0"
             }  flex flex-col justify-center items-center w-full animate-bounce cursor-pointer`}
             onClick={this.changeToSkills}
           >
@@ -124,7 +124,7 @@ export default class Home extends Component {
               className={`rounded-xl text-white w-6/6 mx-auto flex text-center`}
             >
               {" "}
-              Hard Skills
+              Minhas Habilidades
             </button>
             <img src={arrowDown} className={"w-2/6 md:w-1/6"} />
           </div>
@@ -132,7 +132,7 @@ export default class Home extends Component {
           <div
             onClick={this.crollToContact}
             className={`${
-              stage >= 3 ? "opacity-100" : "opacity-0"
+              stage >= 4 ? "opacity-100" : "opacity-0"
             } flex flex-col justify-center items-center h-full w-full animate-bounce cursor-pointer`}
           >
             <button
