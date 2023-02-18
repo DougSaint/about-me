@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
+import ArrowBounce from "../components/ArrowBounce";
 
 const ContactPage = () => {
   const [name, setName] = useState("");
@@ -42,20 +43,6 @@ const ContactPage = () => {
     validateForm();
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    
-    setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitted(true);
-      setName("");
-      setEmail("");
-      setSubject("");
-      setIsFormValid(false);
-      setIsSubmitting(false);
-    }, 1000);
-  };
-
   const validateForm = () => {
     const isValid = name !== "" && email !== "" && subject !== "";
     setIsFormValid(isValid);
@@ -63,10 +50,14 @@ const ContactPage = () => {
 
   return (
     <div
-      className="flex justify-center items-center flex-col h-screen mt-10"
+      className="flex justify-around items-center flex-col h-screen"
       id="contact-page"
       ref={ref}
     >
+      <div className="w-full flex flex-around">
+        <ArrowBounce text ="Pagina Inicial" pageId="home-page" direction="up"/>
+        <ArrowBounce text ="Habilidades" pageId="skills-section" direction="up"/>
+      </div>
       <div
         className={`${
           startRender ? "opacity-1" : "opacity-0"
