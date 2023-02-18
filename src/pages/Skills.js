@@ -5,6 +5,7 @@ import CardSkill from "../components/CardSkill";
 import { texts } from "../texts";
 import arrowDown from "../icons/down-arrow.png";
 import { animateScroll as scroll, scroller } from "react-scroll";
+import ArrowBounce from '../components/ArrowBounce';
 
 export default function Skills() {
   const [startRender, setStateRender] = useState(false);
@@ -31,23 +32,9 @@ export default function Skills() {
     }
   }, [renderCard, startRender]);
 
-  const scrollToHome = () => {
-    scroller.scrollTo("home-page", {
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuart",
-    });
-  };
-  const scrollToContact = () => {
-    scroller.scrollTo("contact-page", {
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuart",
-    });
-  };
 
   return (
-    <div ref={ref} className="h-screen" id="skills-section">
+    <div ref={ref} className="h-screen flex flex-col justify-between" id="skills-section">
       {startRender && (
         <section>
           <div className="pt-12 w-100 ">
@@ -69,39 +56,12 @@ export default function Skills() {
               />
             ))}
           </div>
-
-          <div className="flex center w-4/6 justify-around mx-auto">
-            <div
-              onClick={scrollToHome}
-              className={`${
-                renderCard >= 11 ? "opacity-100" : "opacity-0"
-              } flex flex-col justify-center items-center w-full mt-5 animate-bounce cursor-pointer`}
-            >
-              <button
-                className={`mt-5 rounded-xl text-white w-6/6 mx-auto flex text-center`}
-              >
-                HomePage{" "}
-              </button>
-              <img src={arrowDown} className={"w-2/6 rotate-180 md:w-1/6"} />
-            </div>
-
-            <div
-              onClick={scrollToContact}
-              className={`${
-                renderCard >= 11 ? "opacity-100" : "opacity-0"
-              } flex flex-col justify-center items-center w-full mt-5 animate-bounce cursor-pointer`}
-            >
-              <button
-                className={`mt-5 rounded-xl text-white w-6/6 mx-auto flex text-center`}
-              >
-                Contato{" "}
-              </button>
-              <img src={arrowDown} className={"w-2/6 md:w-1/6"} />
-            </div>
-          </div>
         </section>
       )}
-
+        <div className={`${renderCard >= 11 ? "flex" : "hidden"} flex center w-full justify-around `}>
+            <ArrowBounce text= "Página inicial" pageId ="home-page" direction="up"/>
+            <ArrowBounce text= "Contato" pageId ="contact-page"/>
+        </div>
       {handleVisibilityChange(inView)}
     </div>
   );
