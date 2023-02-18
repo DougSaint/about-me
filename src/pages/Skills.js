@@ -34,7 +34,7 @@ export default function Skills() {
 
 
   return (
-    <div ref={ref} className="h-screen flex flex-col justify-between" id="skills-section">
+    <div ref={ref} className="h-screen flex flex-col justify-between mb-5" id="skills-section">
       {startRender && (
         <section>
           <div className="pt-12 w-100 ">
