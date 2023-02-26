@@ -3,8 +3,6 @@ import { useInView } from "react-intersection-observer";
 import WriteText from "../components/WriteText";
 import CardSkill from "../components/CardSkill";
 import { texts } from "../texts";
-import arrowDown from "../icons/down-arrow.png";
-import { animateScroll as scroll, scroller } from "react-scroll";
 import ArrowBounce from '../components/ArrowBounce';
 
 export default function Skills() {
@@ -34,12 +32,12 @@ export default function Skills() {
 
 
   return (
-    <div ref={ref} className="h-screen flex flex-col justify-between mb-5" id="skills-section">
+    <div ref={ref} className="h-screen flex flex-col justify-between mb-[10vh]" id="skills-section">
       {startRender && (
         <section>
           <div className="pt-12 w-100 ">
             <WriteText
-              text=" Minhas Habilidades"
+              text="Principais habilidades"
               styles="text-2xl text-white text-center bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-purple-200 to-blue-400"
               speed="60"
             />

@@ -1,17 +1,15 @@
 import React, { Component } from "react";
-import { animateScroll as scroll, scroller } from "react-scroll";
 import { texts } from "../texts";
 import WriteText from "../components/WriteText";
-import pcImage from "../icons/pc-image.png";
-import arrowDown from "../icons/down-arrow.png";
-import { styles } from "../styles";
+import myImage from "../icons/me.png";
 import linkedinLogo from "../icons/linkedin.svg";
 import githubLogo from "../icons/github.svg";
 import ArrowBounce from "../components/ArrowBounce";
+import IconBrand from "../components/IconBrand";
 
 export default class Home extends Component {
   state = {
-    stage: 0,
+    stage: 5,
   };
 
   nextStage = () => {
@@ -29,86 +27,85 @@ export default class Home extends Component {
               {stage >= 1 && (
                 <WriteText
                   nextStage={this.nextStage}
-                  text={`Sou ${texts.myName}`}
+                  text={`sou ${texts.myName}`}
                 />
               )}
               {stage >= 2 && (
                 <WriteText
                   styles={"text-red-400"}
                   nextStage={this.nextStage}
-                  text={`E sou ${texts.myProfission}`}
+                  text={`e   sou ${texts.myProfission}`}
                 />
               )}
             </div>
           </section>
-          <div className="flex flex-col mt-auto">
+
+          <div className="flex flex-col md:flex-row justify-center items-center md:mx-auto md:mt-[10vh]">
             <div
               className={`${
                 stage >= 3 ? "opacity-100" : "opacity-0"
-              } text-slate-300 text-xl mx-auto w-5/6 md:w-4/6 transition delay-700 duration-300 ease-in-out`}
-            ></div>
-            <div className="flex  md:justify-center md:items-center md:mx-auto">
-              <div
-                className={`${
-                  stage >= 4 ? "opacity-100" : "opacity-0"
-                }  transition delay-400 duration-200 ease-in-out md:flex md:justify-center `}
-              >
-                <img src={pcImage} alt="an computer" className="md:w-6/12" />
-              </div>
-              <div className="w-8/12 mt-auto h-full self-center md:ml-3 flex items-center mb-auto">
-                {stage >= 3 && (
-                  <WriteText
-                    text={"Estou estudando <Desenvolvimento Web /> pela Trybe"}
-                    nextStage={this.nextStage}
-                    styles="text-purple-200 self-center  mx-auto"
+              }  transition delay-400 duration-200 ease-in-out md:flex md:justify-center w-4/6 md:w-2/12 rounded-full bg-img overflow-hidden`}
+            >
+              <img src={myImage} alt="cartoon of me" />
+            </div>
+            <div className="w-4/6 h-full mt-3 self-center md:ml-3 flex items-center mb-auto md:w-2/6 md:flex-col">
+              {stage >= 3 && (
+                <WriteText
+                  text={"Tenho 23 anos e estudo desenvolvimento web na Trybe."}
+                  nextStage={this.nextStage}
+                  styles="text-purple-200 self-center  mx-auto"
+                />
+              )}
+              <div className="hidden md:flex flex-col w-full ">
+                <p className="text-purple-200 text-center mt-[10vh] mb-5 ">
+                  Você pode me encontrar aqui{" "}
+                </p>
+                <div className="flex w-full mx-auto justify-around md:mt-auto mt-5">
+                  <IconBrand
+                    src={linkedinLogo}
+                    name="LinkedIn"
+                    url="https://www.linkedin.com/in/doug-santos/"
                   />
-                )}
+                  <IconBrand
+                    src={githubLogo}
+                    name="GitHub"
+                    url="https://github.com/DougSaint"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </main>
-        <button
-          onClick={this.crollToContact}
-          className={`${
-            stage >= 4 ? "opacity-100 animate-pulse" : "opacity-0"
-          }  rounded-xl bg-purple-400  text-xl md:mt-auto mt-10 w-3/6 mx-auto p-3 transition delay-400 duration-200 ease-in-out`}
-        >
-          Fale Comigo
-        </button>
-        <div
-          className={`my-6 md:my-auto ${
-            stage >= 4 ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <h3 className={`text-center text-xl text-purple-200 flex flex-col`}>
-            Você pode me encontrar Aqui
-          </h3>
-          <div className="flex w-3/6 mx-auto justify-around md:mt-auto">
-            <a href="https://www.linkedin.com/in/doug-santos/" target="_blank">
-              <div className="flex flex-col justify-center items-center">
-                <img src={linkedinLogo} alt="linkedin logo" />
-                <p className="text-white text-lg">Linkedin</p>
-              </div>
-            </a>
-            <a href="https://github.com/DougSaint" target="_blank">
-              <div className="flex flex-col justify-center items-center">
-                <img
-                  src={githubLogo}
-                  className="w-[48px]"
-                  alt="linkedin logo"
-                />
-                <p className="text-white text-lg">GitHub</p>
-              </div>
-            </a>
+
+          <div
+            className={`${
+              stage >= 4 ? "opacity-100 md:hidden" : "opacity-0 md:hidden"
+            }`}
+          >
+            <p className="text-purple-200 text-center mt-5 ">
+              Você pode me encontrar aqui{" "}
+            </p>
+            <div className="flex w-3/6 mx-auto justify-around md:mt-10">
+              <IconBrand
+                src={linkedinLogo}
+                name="LinkedIn"
+                url="https://www.linkedin.com/in/doug-santos/"
+              />
+              <IconBrand
+                src={githubLogo}
+                name="GitHub"
+                url="https://github.com/DougSaint"
+              />
+            </div>
+
           </div>
-        </div>
-        <div
-          className={`${stage >= 4 ? "opacity-100" : "opacity-0"} 
-          w-6/6 mx-auto flex justify-around w-full`}
-        >
-          <ArrowBounce text={"Habilidades"} pageId="skills-section" />
-          <ArrowBounce text={"Contato"} pageId="contact-page" />
-        </div>
+          <div
+              className={`${stage >= 4 ? "opacity-100" : "opacity-0"} 
+          w-6/6 mx-auto flex justify-around w-full absolute bottom-0`}
+            >
+              <ArrowBounce text={"Habilidades"} pageId="skills-section" />
+              <ArrowBounce text={"Contato"} pageId="contact-page" />
+            </div>
+        </main>
       </div>
     );
   }

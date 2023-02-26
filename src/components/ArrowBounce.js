@@ -1,6 +1,6 @@
 import React from "react";
 import arrowDown from "../icons/down-arrow.png";
-import { animateScroll as scroll, scroller } from "react-scroll";
+import { scroller } from "react-scroll";
 
 const ArrowBounce = ({ direction, pageId, text }) => {
 
@@ -24,7 +24,7 @@ const ArrowBounce = ({ direction, pageId, text }) => {
         {" "}
         {text}
       </h1>
-      <img src={arrowDown} className={`w-[48px] ${direction === 'up' && 'rotate-180'}`} />
+      <img src={arrowDown} alt ="Arrow"className={`w-[48px] ${direction === 'up' && 'rotate-180'}`} />
     </div>
   );
 };
