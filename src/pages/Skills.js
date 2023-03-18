@@ -56,10 +56,6 @@ export default function Skills() {
           </div>
         </section>
       )}
-        <div className={`${renderCard >= 11 ? "flex" : "hidden"} flex center w-full justify-around `}>
-            <ArrowBounce text= "Página inicial" pageId ="home-page" direction="up"/>
-            <ArrowBounce text= "Contato" pageId ="contact-page"/>
-        </div>
       {handleVisibilityChange(inView)}
     </div>
   );

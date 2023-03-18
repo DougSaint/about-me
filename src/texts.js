@@ -5,10 +5,14 @@ import typescriptLogo from "./icons/typescript.svg";
 import tailwindLogo from "./icons/tailwind.svg";
 import cssLogo from "./icons/css3.svg";
 import rtlLogo from "./icons/RTL.png";
+import triviaImg from "./icons/trivia.png";
+import trybeTunesImg from "./icons/trybetunes.png";
+import recipesAppImg from "./icons/recipes-app.png";
+import trybeWalletImg from "./icons/trybeWallet.png";
 
 export const texts = {
   myName: "Douglas Santos",
-  myProfission: "desenvolvedor Front-end",
+  myProfission: "DEV Front-end",
   HardSkills: [
     {
       name: "React",
@@ -53,3 +57,34 @@ export const texts = {
   ],
   softskills: "Metodologias ageis com scrum Kanban, Trello ",
 };
+
+export const projectsList = [
+  {
+    name: "Trivia",
+    image: triviaImg,
+    technologies: "React, Javascript, Jest, React Router, Tailwind, API, Redux",
+    deploy: "https://dougsaint.github.io/trivia/",
+    repository: "https://github.com/DougSaint/trivia",
+  },
+  {
+    name: "App de receitas",
+    image: recipesAppImg,
+    technologies:"React, Javascript, Jest, Tailwind, API, ContextApi, Tailwind",
+    deploy: "",
+    repository: "",
+  },
+  {
+    name: "Trybe Wallet",
+    image: trybeWalletImg,
+    technologies: "React, Javascript, Jest, React Router, Tailwind, Redux",
+    deploy: "https://dougsaint.github.io/trybewallet/",
+    repository: "https://github.com/DougSaint/trybewallet",
+  },
+  {
+    name: "TrybeTunes",
+    image: trybeTunesImg,
+    technologies: "React, Javascript, Jest, React Router, Css Modules, API.",
+    deploy: "https://dougsaint.github.io/trybetunes/",
+    repository: "https://github.com/DougSaint/trybetunes",
+  },
+];

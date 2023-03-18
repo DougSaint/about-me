@@ -22,7 +22,7 @@ export default class Header extends Component {
   render() {
     const { sideMenu } = this.state;
     return (
-      <div className="w-full h-10">
+      <div className="w-full h-10 fixed">
         <header className="absolute w-full md:flex md:justify-end">
           <div className=" text-white md:hidden w-100 ">
             <button onClick={this.handleMenu} >
@@ -30,21 +30,26 @@ export default class Header extends Component {
             </button>
           </div>
           <nav
-            className={`flex flex-col md:flex-row w-1/3 md:space-between relative ${
+            className={`flex flex-col md:flex-row w-1/3 md:space-between relative  ${
               sideMenu ? "" : "hidden md:flex"
             } `}
           >
-            <button className={`p-3 ${sideMenu ? 'bg-white text-gray-800' : 'text-purple-300'} w-full cursor-pointer hover:text-white duration-500`} 
+            <button className={`p-3 ${sideMenu ? 'bg-white text-gray-800' : 'magic-text'} w-full cursor-pointer hover:text-white duration-500`} 
             onClick = {() => {this.scroll('home-page')}} 
             >
               Home
             </button>
-            <button className={`p-3 ${sideMenu ? 'bg-white text-gray-800' : 'text-purple-300'} w-full cursor-pointer hover:text-white duration-500`} 
+            <button className={`p-3 ${sideMenu ? 'bg-white text-gray-800' : 'magic-text'} w-full cursor-pointer hover:text-white duration-500`} 
+            onClick = {() => {this.scroll('projects')}} 
+            >
+              Projetos
+            </button>
+            <button className={`p-3 ${sideMenu ? 'bg-white text-gray-800' : 'magic-text'} w-full cursor-pointer hover:text-white duration-500`} 
             onClick = {() => {this.scroll('skills-section')}} 
             >
               Habilidades
             </button>
-            <button className={`p-3 ${sideMenu ? 'bg-white text-gray-800' : 'text-purple-300'} w-full cursor-pointer hover:text-white duration-500`} 
+            <button className={`p-3 ${sideMenu ? 'bg-white text-gray-800' : 'magic-text'} w-full cursor-pointer hover:text-white duration-500`} 
             onClick = {() => {this.scroll('contact-page')}} 
             >
               Contato
