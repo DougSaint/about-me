@@ -1,7 +1,11 @@
 {
   "files": {
-    "main.css": "/about-me/static/css/main.d0cc9778.css",
-    "main.js": "/about-me/static/js/main.f3b12e4d.js",
+    "main.css": "/about-me/static/css/main.9a8e477e.css",
+    "main.js": "/about-me/static/js/main.fdbe8507.js",
+    "static/media/recipes-app.png": "/about-me/static/media/recipes-app.d0d4d84fb96e2039b59e.png",
+    "static/media/trybetunes.png": "/about-me/static/media/trybetunes.16dde5d5d031ab784765.png",
+    "static/media/trivia.png": "/about-me/static/media/trivia.7241dbc9cea3214e1b86.png",
+    "static/media/trybeWallet.png": "/about-me/static/media/trybeWallet.534cd83525c4241f6c2c.png",
     "static/media/programmer.png": "/about-me/static/media/programmer.bc824615abef66a8d432.png",
     "static/media/typescript.svg": "/about-me/static/media/typescript.1bd166c69617209ba0e2764474b58b1c.svg",
     "static/media/css3.svg": "/about-me/static/media/css3.19cd0dec3a45c84933cf89413da68d3e.svg",
@@ -12,11 +16,11 @@
     "index.html": "/about-me/index.html",
     "static/media/html.svg": "/about-me/static/media/html.aff8a9cb398fc75e4f21dab1ba1e097e.svg",
     "static/media/tailwind.svg": "/about-me/static/media/tailwind.973c73e85d4daa24b257ba20298716c4.svg",
-    "main.d0cc9778.css.map": "/about-me/static/css/main.d0cc9778.css.map",
-    "main.f3b12e4d.js.map": "/about-me/static/js/main.f3b12e4d.js.map"
+    "main.9a8e477e.css.map": "/about-me/static/css/main.9a8e477e.css.map",
+    "main.fdbe8507.js.map": "/about-me/static/js/main.fdbe8507.js.map"
   },
   "entrypoints": [
-    "static/css/main.d0cc9778.css",
-    "static/js/main.f3b12e4d.js"
+    "static/css/main.9a8e477e.css",
+    "static/js/main.fdbe8507.js"
   ]
 }
